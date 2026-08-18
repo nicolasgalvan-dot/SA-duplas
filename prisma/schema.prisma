@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Equipe {
+  id              Int              @id @default(autoincrement())
+  nome            String
+  especialidade   String
+  desenvolvedores Desenvolvedor[]
+}
+
+model Desenvolvedor {
+  id       Int    @id @default(autoincrement())
+  nome     String
+  nivel    String
+  equipeId Int
+  equipe   Equipe @relation(fields: [equipeId], references: [id])
+}

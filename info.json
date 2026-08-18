@@ -1,0 +1,12 @@
+{
+  "equipe": [
+    {
+      "nome": "Gustavo Gaeta",
+      "funcao": "Desenvolvedor"
+    },
+    {
+      "nome": "Nicolas Galvan",
+      "funcao": "Desenvolvedor"
+    }
+  ]
+}
